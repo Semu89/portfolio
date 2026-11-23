@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seema Singh | Operations & IT Professional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-main: #c9d1d9;
+            --text-light: #ffffff;
+            --accent: #58a6ff;
+            --card-bg: #161b22;
+            --border: #30363d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .badge {
+            background-color: rgba(88, 166, 255, 0.1);
+            color: var(--accent);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid var(--accent);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--text-light);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        /* SKILLS GRID */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .skill-card h4 {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tags span {
+            background-color: #21262d;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+        }
+
+        /* PROJECTS GRID */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .project-card h3 {
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            color: #8b949e;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            border-left: 2px solid var(--border);
+            padding-left: 30px;
+            margin-left: 10px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -37px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px var(--bg-color);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item h4 {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item p {
+            font-size: 0.95rem;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #8b949e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="badge">Available for Operations & IT Roles</div>
+            <p style="font-size: 1.5rem; color: var(--text-light); margin-bottom: 5px;">Hi, I'm</p>
+            <h1>Seema Kumari</h1>
+            <h2>Operations Professional</h2>
+            <p>I streamline business operations, manage MIS reporting, and lead teams to ensure efficient IT processes and timely task completion.</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>2+</h3>
+                    <p>Years Exp</p>
+                </div>
+                <div class="stat-item">
+                    <h3>7</h3>
+                    <p>Total Projects</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5</h3>
+                    <p>Roles Handled</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section>
+            <div class="section-title">Tech Stack & Skills</div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Operations & Management</h4>
+                    <div class="skill-tags">
+                        <span>Team Leadership</span>
+                        <span>Process Monitoring</span>
+                        <span>Vendor Coordination</span>
+                        <span>Issue Resolution</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h4>IT & Data Management</h4>
+                    <div class="skill-tags">
+                        <span>MIS Reporting</span>
+                        <span>CRM Software</span>
+                        <span>Data Analysis</span>
+                        <span>MS Excel/Word</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h4>Web Technologies</h4>
+                    <div class="skill-tags">
+                        <span>PHP</span>
+                        <span>Laravel</span>
+                        <span>MySQL</span>
+                        <span>HTML/CSS/JS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section>
+            <div class="section-title">Featured Work</div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>KuseCrystal E-Commerce</h3>
+                    <p>Co-founded and managed an online lifestyle and e-commerce business. Handled business development, lead generation, and customer engagement.</p>
+                    <div class="skill-tags">
+                        <span>Business Ops</span>
+                        <span>CRM</span>
+                        <span>E-Commerce</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Healthcare MIS Dashboard</h3>
+                    <p>Managed complex MIS data for Pathology, Radiology, OPD, and IPD during tenure at MedRev Pharmacy ensuring high data accuracy.</p>
+                    <div class="skill-tags">
+                        <span>MIS</span>
+                        <span>Data Management</span>
+                        <span>Reporting</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>EZYONEST Platform</h3>
+                    <p>A multi-service platform concept connecting customers and service providers using modern web technologies.</p>
+                    <div class="skill-tags">
+                        <span>React</span>
+                        <span>Laravel</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION & EXPERIENCE -->
+        <section>
+            <div class="section-title">Career Path</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                
+                <!-- Education -->
+                <div>
+                    <h3 style="color: var(--text-light); margin-bottom: 20px;">Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2024 - 2026</div>
+                            <h4>Master of Computer Applications</h4>
+                            <p>Dr. C. V. Raman University, Bilaspur</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2021 - 2024</div>
+                            <h4>Bachelor of Computer Applications</h4>
+                            <p>Dr. C. V. Raman University, Bihar (70%+)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div>
+                    <h3 style="color: var(--text-light); margin-bottom: 20px;">Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">Aug 2026 - Present</div>
+                            <h4>Operations Supervisor</h4>
+                            <p>Trackon Couriers Pvt. Ltd.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Apr 2026 - Jul 2026</div>
+                            <h4>Team Lead</h4>
+                            <p>Ola Electric</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Dec 2023 - Dec 2024</div>
+                            <h4>IT Executive</h4>
+                            <p>MedRev Pharmacy</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <h2 style="color: var(--text-light); margin-bottom: 10px;">Get In Touch</h2>
+            <p>Email: kumariseemasingh600@gmail.com</p>
+            <p>Phone: +91 90600 49286</p>
+            <p style="margin-top: 10px;">
+                <a href="https://www.linkedin.com/in/seema-singh-rajput-055749288" style="color: var(--accent); text-decoration: none;">LinkedIn</a> | 
+                <a href="https://github.com/Semu89" style="color: var(--accent); text-decoration: none;">GitHub</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
